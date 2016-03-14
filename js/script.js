@@ -8,7 +8,8 @@ $(function() {
 
       menu.forEach(function(item) {
         var names = item.name;
-        $('#container').append('<p>' + names + '</p>');
+        var price = item.price;
+        $('#container').append('<p>' + names + ' $' + price + '</p>');
       });
 
     }
