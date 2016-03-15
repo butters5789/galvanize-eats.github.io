@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  var subtotal = 0;
+
   $.ajax({
       method: "GET",
       url: 'https://galvanize-eats-api.herokuapp.com/menu'
@@ -10,18 +12,20 @@ $(document).ready(function() {
         var name = item.name;
         var price = item.price;
         var type = item.type;
-        $('#menu').append('<div data-price="' + price + '">' + name + ' $' + price + '</div>');
+        if (type == 'burger') {
+          $('#burger').append('<div data-price="' + price + '">' + name + ' $' + price + '</div>');
+        }
+        if (type == 'pizza') {
+          $('#pizza').append('<div data-price="' + price + '">' + name + ' $' + price + '</div>');
+        }
       });
-      $('#menu div:first').addClass('active');
+      $('#menu > div div:first').addClass('active');
     });
 
-  $('#menu').on('click', 'div', function() {
+  $('#menu > div').on('click', 'div', function() {
     $('div').removeClass('active');
     $(this).addClass('active');
   });
-
-
-  var subtotal = 0;
 
   $('#additem').click(function() {
 
