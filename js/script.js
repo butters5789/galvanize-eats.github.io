@@ -19,11 +19,11 @@ $(document).ready(function() {
     $('div').removeClass('active');
     $(this).addClass('active');
   });
-  
+
 
   var subtotal = 0;
 
-  $('button').click(function() {
+  $('#additem').click(function() {
 
     var quantity = $('#quantity').val();
     if (quantity < 1 || quantity > 99) {
@@ -33,6 +33,7 @@ $(document).ready(function() {
 
     var addToOrder = $('.active').text();
     $('#food').append('<div>' + addToOrder + ' x ' + quantity + '</div>');
+    $('#items').append(addToOrder + ' x ' + quantity + ', ');
 
     var price = $('.active').data('price');
     var itemPrice = price * quantity;

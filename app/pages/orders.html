@@ -22,18 +22,22 @@
 
   <label for="quantity">Quantity</label>
   <input type="number" id="quantity" name="quantity" min="1" max="99" value="1">
-  <button type="button">Add Item</button>
+  <button type="button" id="additem">Add Item</button>
 
-  <form>
+  <form action="https://galvanize-eats-api.herokuapp.com/orders" method="post">
     <label for="name">Name</label>
     <input type="text" id="name" name="name">
     <label for="phone">Phone Number</label>
     <input type="tel" id="phone" name="phone">
     <label for="address">Address</label>
     <input type="text" id="address" name="address">
+    <label for="items">Order</label>
+    <textarea id="items" name="items"></textarea>
+    <button type="submit">Deliver It!</button>
   </form>
 
   <div id="order">
+
     <div id="food">
     </div>
 
@@ -42,7 +46,11 @@
         <p>Subtotal: <span id="subtotal">$0.00</span></p>
       </div>
     </div>
+
   </div>
+
+
+
 
   <footer>
     <h5 class="footer-content"><i class="fa fa-copyright"></i> Galvanize, 2015</h5>

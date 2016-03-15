@@ -65,6 +65,9 @@ h3 {
 .active {
   background-color: #BDC7DC;
 }
+textarea {
+  display: none;
+}
 footer {
   text-align: center;
   background-color: #000000;
