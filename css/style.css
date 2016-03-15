@@ -62,11 +62,114 @@ h3 {
   font-weight: 400;
   margin: 0;
 }
+#container {
+  width: 100%;
+  background: #f1b43b;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #f1b43b 0%, #955009 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #f1b43b 0%, #955009 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #f1b43b 0%, #955009 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f1b43b', endColorstr='#955009', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+#container-left {
+  width: 35%;
+  margin: 20px 2% 0 18%;
+  float: left;
+}
+#menu {
+  background-color: #ffffff;
+  height: 270px;
+  overflow: scroll;
+}
+#burger span, #pizza span {
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 800;
+}
+#menu div div {
+  padding: 15px;
+  font-size: 26px;
+}
+label {
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 600;
+}
+.blockup {
+  display: inline-block;
+  margin: 15px 0;
+}
+.blockup input {
+  width: 50px;
+  padding-left: 10px;
+}
+#additem {
+  background-color: #5973A6;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 15px 30px;
+  margin: 0 0 0 15px;
+  box-shadow: 1px 1px 5px #888888;
+}
+#additem:hover {
+  background-color: rgba(89, 115, 166, 0.9);
+}
+input {
+  height: 40px;
+}
+form input {
+  display: block;
+  width: 99%;
+  background-color: #FAFFBD;
+  margin: 0 0 15px 0;
+}
+#deliverit {
+  background-color: #59A673;
+  width: 100%;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 15px 30px;
+  margin: 15px 0;
+  box-shadow: 1px 1px 5px #888888;
+}
+#deliverit:hover {
+  background-color: rgba(89, 166, 115, 0.9);
+}
 .active {
   background-color: #BDC7DC;
 }
 textarea {
   display: none;
+}
+#container-right {
+  width: 27%;
+  margin: 20px 18% 20px 0;
+  float: left;
+  position: relative;
+}
+#order {
+  padding: 15px;
+  height: 680px;
+  background-color: #ffffff;
+}
+#food div span {
+  float: right;
+}
+#totals {
+  text-align: right;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+#totals p:last-child {
+  font-weight: 700;
 }
 footer {
   text-align: center;

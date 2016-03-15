@@ -12,50 +12,64 @@
 
 <body>
 
-  <header>
-    <h1>Galvaize Eats</h1>
-  </header>
+  <div id="container">
 
-  <div id="menu">
-    <div id="burger">
-      <span>Burgers</span>
+    <header>
+      <h1>Galvanize Eats</h1>
+    </header>
 
-    </div>
-    <div id="pizza">
-      <span>Pizza</span>
+    <div id="container-left">
 
-    </div>
-  </div>
+      <div id="menu">
+        <div id="burger">
+          <span>Burgers</span>
 
-  <label for="quantity">Quantity</label>
-  <input type="number" id="quantity" name="quantity" min="1" max="99" value="1">
-  <button type="button" id="additem">Add Item</button>
+        </div>
+        <div id="pizza">
+          <span>Pizza</span>
 
-  <form action="https://galvanize-eats-api.herokuapp.com/orders" method="post">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name">
-    <label for="phone">Phone Number</label>
-    <input type="tel" id="phone" name="phone">
-    <label for="address">Address</label>
-    <input type="text" id="address" name="address">
-    <label for="items">Order</label>
-    <textarea id="items" name="items"></textarea>
-    <button type="submit">Deliver It!</button>
-  </form>
-
-  <div id="order">
-
-    <div id="food">
-    </div>
-
-    <div id="totals">
-      <div>
-        <p>Subtotal: <span id="subtotal">$0.00</span></p>
+        </div>
       </div>
+
+      <div class="blockup">
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="99" value="1">
+      </div>
+      <button type="button" id="additem">Add Item</button>
+
+      <form action="https://galvanize-eats-api.herokuapp.com/orders" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address">
+        <textarea id="items" name="items"></textarea>
+        <button type="submit" id="deliverit">Deliver It!</button>
+      </form>
+
     </div>
 
-  </div>
+    <div id="container-right">
 
+      <div id="order">
+
+        <div id="food">
+        </div>
+
+        <div id="totals">
+          <p>Subtotal: <span id="subtotal">$0.00</span></p>
+          <p>Tax: <span id="tax">$0.00</span></p>
+          <p>Total: <span id="total">$0.00</span></p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="clear"></div>
+
+  </div>
 
 
 

@@ -36,13 +36,19 @@ $(document).ready(function() {
     }
 
     var addToOrder = $('.active').text();
-    $('#food').append('<div>' + addToOrder + ' x ' + quantity + '</div>');
+    addToOrder = addToOrder.split("$")[0];
+    var price = $('.active').data('price');
+    $('#food').append('<div>' + addToOrder + ' x ' + quantity + ' <span>' + price + '</span></div>');
     $('#items').append(addToOrder + ' x ' + quantity + ', ');
 
-    var price = $('.active').data('price');
+
     var itemPrice = price * quantity;
     subtotal = subtotal + itemPrice;
-    $('#subtotal').html('$' + subtotal);
+    $('#subtotal').html('$' + subtotal.toFixed(2));
+    var tax = 0.083 * subtotal;
+    $('#tax').html('$' + tax.toFixed(2));
+    var total = tax + subtotal;
+    $('#total').html('$' + total.toFixed(2));
   });
 
 });
