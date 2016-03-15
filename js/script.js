@@ -10,7 +10,7 @@ $(document).ready(function() {
         var name = item.name;
         var price = item.price;
         var type = item.type;
-        $('#menu').append('<div>' + name + ' $' + price + '</div>');
+        $('#menu').append('<div data-price="' + price + '">' + name + ' $' + price + '</div>');
       });
       $('#menu div:first').addClass('active');
     });
@@ -19,15 +19,25 @@ $(document).ready(function() {
     $('div').removeClass('active');
     $(this).addClass('active');
   });
+  
+
+  var subtotal = 0;
 
   $('button').click(function() {
+
     var quantity = $('#quantity').val();
     if (quantity < 1 || quantity > 99) {
       alert('Please pick a quantity between 1 and 99');
       return false;
     }
+
     var addToOrder = $('.active').text();
-    $('#order').append('<div>' + addToOrder + ' x ' + quantity + '</div>');
+    $('#food').append('<div>' + addToOrder + ' x ' + quantity + '</div>');
+
+    var price = $('.active').data('price');
+    var itemPrice = price * quantity;
+    subtotal = subtotal + itemPrice;
+    $('#subtotal').html('$' + subtotal);
   });
 
 });
