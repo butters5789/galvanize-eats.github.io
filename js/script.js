@@ -20,4 +20,9 @@ $(document).ready(function() {
     $(this).addClass('active');
   });
 
+  $('button').click(function() {
+    var addToOrder = $('.active').text();
+    $('#order').append('<div>' + addToOrder + '</div>');
+  });
+
 });
