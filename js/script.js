@@ -13,10 +13,10 @@ $(document).ready(function() {
         var price = item.price;
         var type = item.type;
         if (type == 'burger') {
-          $('#burger').append('<div data-price="' + price + '">' + name + ' $' + price + '</div>');
+          $('#burger').append('<div data-price="' + price + '">' + name + ' <span>$' + price + '</span></div>');
         }
         if (type == 'pizza') {
-          $('#pizza').append('<div data-price="' + price + '">' + name + ' $' + price + '</div>');
+          $('#pizza').append('<div data-price="' + price + '">' + name + ' <span>$' + price + '</span></div>');
         }
       });
       $('#menu > div div:first').addClass('active');
