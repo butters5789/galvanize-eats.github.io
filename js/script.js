@@ -21,8 +21,13 @@ $(document).ready(function() {
   });
 
   $('button').click(function() {
+    var quantity = $('#quantity').val();
+    if (quantity < 1 || quantity > 99) {
+      alert('Please pick a quantity between 1 and 99');
+      return false;
+    }
     var addToOrder = $('.active').text();
-    $('#order').append('<div>' + addToOrder + '</div>');
+    $('#order').append('<div>' + addToOrder + ' x ' + quantity + '</div>');
   });
 
 });
